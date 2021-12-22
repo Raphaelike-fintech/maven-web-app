@@ -19,7 +19,7 @@ node('master')
         }
  stage('5.Deploy-UAT')
         {
-       deploy adapters: [tomcat9(credentialsId: 'tomcat-credential', path: '', url: 'http://3.87.228.153:8080/')], contextPath: null, war: 'target/*.war'
+       deploy adapters: [tomcat9(credentialsId: 'tomcat-credential', path: '', url: 'http://3.84.149.161:8080/')], contextPath: null, war: 'target/*.war'
         }   
   
       stage('EmailN'){
@@ -37,7 +37,7 @@ Build from Ebay pipeline project
       }
   
       stage('prod-Deploy'){
-          deploy adapters: [tomcat9(credentialsId: 'tomcat-credential', path: '', url: 'http://3.87.228.153:8080/')], contextPath: null, war: 'target/*.war'
+          deploy adapters: [tomcat9(credentialsId: 'tomcat-credential', path: '', url: 'http://3.84.149.161:8080/')], contextPath: null, war: 'target/*.war'
       }
       
   } 
